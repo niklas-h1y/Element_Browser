@@ -1,9 +1,9 @@
-# DOM Inspector & Modifier Pro
+# DOM Inspector and Modifier Pro
 
-Eine mächtige Manifest V3 Extension für Mobilbrowser (wie Lemur oder Kiwi) und Desktop-Browser, um Webseiten-Elemente via Klick auszuwählen und live zu manipulieren.
+Visual HTML element inspector and styling modifier optimized for mobile and desktop web extensions.
 
-## ✨ Features
-- **Visueller Element-Picker:** Tippe ein Element direkt auf dem Bildschirm an, um es zu fokussieren.
-- **Style-Wechsler:** Ändere Display-Typen (z. B. Ausblenden via `none`), Opazität oder Farben in Echtzeit.
-- **iFrame Sandbox Override:** Erkennt automatisch eingebettete iFrames und erlaubt das Entziehen oder Gewähren von Script-Rechten.
-- **Nuke-Option:** Lösche störende Container oder Werbe-Overlays mit einem Klick permanent aus dem aktuellen DOM-Tree.
+## Core Features
+- Interactive element picker via touch/click overlay.
+- Dynamic CSS mutation engine.
+- Sandbox configurations for framing targets.
+- Direct node deletion tool.
