@@ -22,17 +22,17 @@ document.getElementById('picker-btn').addEventListener('click', () => {
       action: isPicking ? "START_PICKER" : "STOP_PICKER" 
     });
     
-    if (isPicking) window.close(); // Schließen für freies Tippen auf dem Bildschirm
+    if (isPicking) window.close();
   });
 });
 
 function togglePickerUI(active) {
   const btn = document.getElementById('picker-btn');
   if (active) {
-    btn.innerText = "🛑 Auswahlmodus stoppen";
+    btn.innerText = "🛑 Stop Picker Mode";
     btn.classList.add('active');
   } else {
-    btn.innerText = "🎯 Element auswählen";
+    btn.innerText = "🎯 Select Element";
     btn.classList.remove('active');
   }
 }
@@ -80,18 +80,18 @@ document.getElementById('apply-btn').addEventListener('click', () => {
       styles: { display: styleDisplay, opacity: styleOpacity, background: styleBg },
       sandboxString: sandboxString
     }, () => {
-      alert("Änderungen auf Element übertragen!");
+      alert("Changes applied!");
     });
   });
 });
 
 document.getElementById('delete-btn').addEventListener('click', () => {
-  if (confirm("Möchtest du dieses Element wirklich endgültig aus der aktuellen Seite löschen?")) {
+  if (confirm("Delete this element permanently from the current view?")) {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       if (!tabs || !tabs[0]) return;
       chrome.tabs.sendMessage(tabs[0].id, { action: "DELETE_SELECTED_ELEMENT" }, () => {
         document.getElementById('modifier-controls').style.display = 'none';
-        document.getElementById('target-info').innerText = "Element erfolgreich gelöscht!";
+        document.getElementById('target-info').innerText = "Element deleted successfully!";
       });
     });
   }
