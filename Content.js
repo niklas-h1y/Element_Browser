@@ -90,8 +90,8 @@ function onElementClick(e) {
   chrome.runtime.sendMessage({
     action: "ELEMENT_CAPTURED",
     tagName: selectedElement.tagName,
-    id: selectedElement.id || "keine",
-    className: selectedElement.className || "keine",
+    id: selectedElement.id || "none",
+    className: selectedElement.className || "none",
     sandboxTokens: sandboxAttr.split(/\s+/).filter(t => t.length > 0),
     currentStyles: {
       display: computed.display,
