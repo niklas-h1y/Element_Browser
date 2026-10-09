@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>DOM Inspector Pro</title>
@@ -79,42 +79,40 @@
 <body>
   <h3>DOM Element Inspector</h3>
   
-  <button class="action-btn" id="picker-btn">🎯 Element auswählen</button>
+  <button class="action-btn" id="picker-btn">🎯 Select Element</button>
   
-  <div class="category">Gewähltes Element</div>
-  <div id="target-info" class="inspect-panel">Kein Element gewählt. Tippe auf den Button oben!</div>
+  <div class="category">Selected Target</div>
+  <div id="target-info" class="inspect-panel">No element selected. Tap the button above!</div>
 
   <div id="modifier-controls" style="display: none;">
-    <!-- STYLE MODERATION -->
-    <div class="category">UI & Style verändern</div>
+    <div class="category">Modify UI and Style</div>
     <div class="input-group">
-      <label>Display-Modus</label>
-      <input type="text" id="style-display" placeholder="z.B. none, block">
+      <label>Display Mode</label>
+      <input type="text" id="style-display" placeholder="e.g. none, block">
     </div>
     <div class="input-group">
-      <label>Deckkraft (0.0 - 1.0)</label>
+      <label>Opacity (0.0 - 1.0)</label>
       <input type="text" id="style-opacity" placeholder="1.0">
     </div>
     <div class="input-group">
-      <label>Hintergrundfarbe</label>
+      <label>Background Color</label>
       <input type="text" id="style-bg" placeholder="red, transparent">
     </div>
 
-    <!-- SONDERFUNKTION FÜR IFRAMES -->
     <div id="iframe-sandbox-section" style="display: none;">
-      <div class="category">iFrame Sicherheitsflags</div>
+      <div class="category">iFrame Sandbox Flags</div>
       <div class="input-group">
-        <label>Scripts erlauben</label>
+        <label>Allow Scripts</label>
         <label class="switch"><input type="checkbox" id="allow-scripts"><span class="slider"></span></label>
       </div>
       <div class="input-group">
-        <label>Same-Origin erlauben</label>
+        <label>Allow Same-Origin</label>
         <label class="switch"><input type="checkbox" id="allow-same-origin"><span class="slider"></span></label>
       </div>
     </div>
 
-    <button class="action-btn" id="apply-btn">⚡ Änderungen anwenden</button>
-    <button class="action-btn" id="delete-btn">🗑️ Element komplett löschen</button>
+    <button class="action-btn" id="apply-btn">⚡ Apply Changes</button>
+    <button class="action-btn" id="delete-btn">🗑️ Delete Element</button>
   </div>
 
   <script src="popup.js"></script>
