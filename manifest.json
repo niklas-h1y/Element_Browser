@@ -1,19 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "DOM Inspector & Modifier Pro",
+  "name": "DOM Inspector and Modifier Pro",
   "version": "1.0",
-  "description": "Wähle beliebige HTML-Elemente visuell aus, um deren Layout, CSS-Eigenschaften und iFrame-Sandbox-Rechte live zu ändern.",
+  "description": "Select HTML elements visually to change layout properties, styles, and iframe sandbox tokens.",
   "permissions": [
     "activeTab"
+  ],
+  "host_permissions": [
+    "*://*/*"
   ],
   "action": {
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["http://*/*", "https://*/*"],
       "js": ["content.js"],
-      "run_at": "document_start"
+      "run_at": "document_idle"
     }
   ]
 }
